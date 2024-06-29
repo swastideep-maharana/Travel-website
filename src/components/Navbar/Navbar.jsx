@@ -95,8 +95,8 @@ const Navbar = () => {
                   </div>
                   <div className="absolute -left-9 top-[57px] z-[9999] hidden group-hover:block shadow-md text-black w-[150px] bg-white p-2">
                     <ul>
-                      {DropdownLinks.map((data) => (
-                        <li key={data.name}>
+                      {DropdownLinks.map((data, index) => (
+                        <li key={index}>
                           <a
                             className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
                             href={data.link}
@@ -135,6 +135,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        {/* Responsive menu for mobile */}
         <ResponsiveMenu setShowMenu={setShowMenu} showMenu={showMenu} />
       </div>
     </>
