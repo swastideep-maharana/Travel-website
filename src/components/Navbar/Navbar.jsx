@@ -52,7 +52,7 @@ const Navbar = () => {
                 <li className="py-4">
                   <NavLink
                     to="/"
-                    activeClassName="active"
+                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     Home
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <li className="py-4">
                   <NavLink
                     to="/blogs"
-                    activeClassName="active"
+                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     Blogs
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <li className="py-4">
                   <NavLink
                     to="/places"
-                    activeClassName="active"
+                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     Best Places
@@ -79,7 +79,7 @@ const Navbar = () => {
                 <li className="py-4">
                   <NavLink
                     to="/about"
-                    activeClassName="active"
+                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     About

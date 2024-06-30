@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero";
 import Place from "../components/Places/Place";
 import Bannerimg from "../components/Bannerimg/Bannerimg";
 import Poster from "../assets/cover-women.jpg";
+import Blogs from "./Blogs";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         </div>
         <Place />
         <Bannerimg img={Poster} />
+        <Blogs />
       </div>
     </>
   );
