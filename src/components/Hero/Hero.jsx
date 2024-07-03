@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Hero = () => {
-  const [priceValue, setPriceValue] = React.useState(30);
+  const [priceValue, setPriceValue] = useState(30);
+
+  const handlePriceChange = (e) => {
+    setPriceValue(e.target.value);
+  };
 
   return (
     <div className="bg-black/20 h-full">
@@ -11,19 +15,11 @@ const Hero = () => {
             <p data-aos="fade-up" className="text-sm">
               Our Packages
             </p>
-            <p
-              data-aos="fade-up"
-              data-aos-delay="300"
-              className="font-bold text-3xl"
-            >
+            <p data-aos="fade-up" data-aos-delay="300" className="font-bold text-3xl">
               Search Your Destination
             </p>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-delay="600"
-            className="space-y-4 bg-white rounded-md p-4 relative"
-          >
+          <div data-aos="fade-up" data-aos-delay="600" className="space-y-4 bg-white rounded-md p-4 relative">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-3">
               <div>
                 <label htmlFor="destination" className="opacity-70">
@@ -65,7 +61,7 @@ const Hero = () => {
                     max="1000"
                     value={priceValue}
                     step="10"
-                    onChange={(e) => setPriceValue(e.target.value)}
+                    onChange={handlePriceChange}
                   />
                 </div>
               </div>

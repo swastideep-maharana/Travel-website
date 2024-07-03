@@ -5,6 +5,8 @@ import Place from "../components/Places/Place";
 import Bannerimg from "../components/Bannerimg/Bannerimg";
 import Poster from "../assets/cover-women.jpg";
 import Blogs from "./Blogs";
+import Banner from "../components/Banner/Banner";
+import Testimonial from "../components/Testimonial/Testimonial.jsx";
 
 const Home = () => {
   return (
@@ -25,6 +27,8 @@ const Home = () => {
         <Place />
         <Bannerimg img={Poster} />
         <Blogs />
+        <Banner />
+        <Testimonial />
       </div>
     </>
   );

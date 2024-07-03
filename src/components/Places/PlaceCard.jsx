@@ -8,9 +8,7 @@ const PlaceCard = ({ img, title, location, Description, price, type }) => {
         <img
           src={img}
           alt=""
-          className="mx-auto h-[220px]
-        w-full object-cover transition duration-700 hover:skew-x-2
-        hover:scale-110"
+          className="mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110"
         />
       </div>
       <div className="space-y-2 p-3">
@@ -20,7 +18,7 @@ const PlaceCard = ({ img, title, location, Description, price, type }) => {
           <span>{location}</span>
         </div>
         <p className="line-clamp-2">{Description}</p>
-        <div className="flex items-center justify-between border-t-2 y-3 !mt-3">
+        <div className="flex items-center justify-between border-t-2 pt-3 mt-3">
           <div className="opacity-70">
             <p>{type}</p>
           </div>
