@@ -8,7 +8,7 @@ const BannerPic = ({ img }) => {
   };
 
   return (
-    <div data-aos="zoom-in" className="h-[400px] w-full" style={bgImage}></div>
+    <div data-aos="zoom-in" className=" h-[400px] w-full" style={bgImage}></div>
   );
 };
 
