@@ -7,8 +7,15 @@ import Poster from "../assets/cover-women.jpg";
 import Banner2 from "../assets/travel-cover2.jpg";
 import Blogs from "./Blogs";
 import Banner from "../components/Banner/Banner";
+import Popup from "../components/Popup/Popup";
 
 const Home = () => {
+  const [orderPopup, setOrderPopup] = React.useState(false);
+
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
+
   return (
     <>
       <div>
@@ -24,11 +31,12 @@ const Home = () => {
           </video>
           <Hero />
         </div>
-        <Place />
+        <Place handleOrderPopup={handleOrderPopup} />
         <Bannerimg img={Poster} />
         <Blogs />
         <Banner />
         <Bannerimg img={Banner2} />
+        <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
       </div>
     </>
   );

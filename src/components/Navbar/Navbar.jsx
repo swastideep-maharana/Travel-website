@@ -20,7 +20,7 @@ const DropdownLinks = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ handleOrderPopup }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -113,7 +113,10 @@ const Navbar = () => {
 
             {/* Book now button */}
             <div className="flex items-center gap-4">
-              <button className="bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-1000 text-white px-3 py-1 rounded-full">
+              <button
+                onClick={() => handleOrderPopup()}
+                className="bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-1000 text-white px-3 py-1 rounded-full"
+              >
                 Book Now
               </button>
               {/* Mobile hamburger menu */}

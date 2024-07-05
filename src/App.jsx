@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout";
@@ -8,8 +8,15 @@ import Blogs from "./pages/Blogs";
 import BlogsDetails from "./pages/BlogsDetails";
 import PlacesRoute from "./pages/PlacesRoute";
 import Nopage from "./pages/Nopage";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>

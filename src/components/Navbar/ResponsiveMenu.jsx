@@ -47,7 +47,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
         <div className="text-black mt-12">
           <ul className="space-y- text-xl">
             {navbarLinks.map(({ name, link }) => (
-              <li>
+              <li key={name}>
                 <Link
                   to={link}
                   onClick={() => setShowMenu(false)}
