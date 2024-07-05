@@ -4,9 +4,9 @@ import Hero from "../components/Hero/Hero";
 import Place from "../components/Places/Place";
 import Bannerimg from "../components/Bannerimg/Bannerimg";
 import Poster from "../assets/cover-women.jpg";
+import Banner2 from "../assets/travel-cover2.jpg";
 import Blogs from "./Blogs";
 import Banner from "../components/Banner/Banner";
-import Testimonial from "../components/Testimonial/Testimonial.jsx";
 
 const Home = () => {
   return (
@@ -28,7 +28,7 @@ const Home = () => {
         <Bannerimg img={Poster} />
         <Blogs />
         <Banner />
-        <Testimonial />
+        <Bannerimg img={Banner2} />
       </div>
     </>
   );

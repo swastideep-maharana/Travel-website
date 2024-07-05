@@ -5,12 +5,17 @@ const BlogCard = ({ image, date, title, description, author }) => {
   return (
     <Link
       to={`/blogs/${title}`}
-      onclick={() => {
+      onClick={() => {
         window.scrollTo(0, 0);
+        // window.scroll({
+        //   top: 0,
+        //   left: 0,
+        //   behavior: "smooth",
+        // });
       }}
       state={{ image, date, title, description, author }}
     >
-       <div className="p-4 shadow-lg transition-all duration-500 hover:shadow-xl "> {/*dark:bg-slate-950 dark:text-white */}
+      <div className="p-4 shadow-lg transition-all duration-500 hover:shadow-xl ">
         <div className="overflow-hidden">
           <img
             src={image}
